@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root{
+    --bdr:1px solid black;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    border: var(--bdr);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    background-image: url(Background.jpg);
+}
+
+.command{
+    width: 50vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(39, 39, 39);
+}
+
+.command,.command button, .command input{
+    border-radius: 5px;
+    background-color: #e1e1e15b;
+    box-shadow: 20px 20px 60px #9b9b9b41 ;
+    box-shadow: inset -20px -20px -60px #cfcfcf40;
+}
+.command button{
+    width: 10vw;
+    margin: auto;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    padding: 3px;
+}
+
+.command input{
+    border: none;
+    background-color: #00000078;
+    font-weight: bold;
+    height: 25px;
+    color: white;
+}
+.box{
+    height: 20vh;
+    width: 100%;
+    border: var(--bdr);
+    display: flex;
+    justify-content: flex-start;
+     padding:5px 20px;
+     color: white;
+     background-color: rgb(22, 22, 22);
+}
+
+.image{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.length{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(205, 205, 205);
+    font-size: 0.8rem;
+    background-color: black;
+    
+}
+.image img{
+    height: 18vh;
+    border-radius: 5px;
+}
+
+.text{
+    margin-left: 20px;
+}
+
+.text span{
+    margin-right: 20px;
+}
+
+.text i{
+    font-size: 4px;
+    position: relative;
+    bottom: 2px;
+}
+.title{
+    line-height: 70px;
+    font-size: 1.9rem;
+}
+
+.title span{
+    color: rgb(48, 48, 48);
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  
+    .command {
+      width: 90%; /* Adjust width for smaller screens */
+      height: auto;
+      margin-bottom: 10px;
+    }
+  
+    .command button {
+      width: 30%; /* Adjust button width for smaller screens */
+      margin: 10px auto; /* Center the button */
+    }
+  
+    .box {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .image {
+      height: auto;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .image img {
+      width: 100%; /* Adjust image width to fit smaller screens */
+      height: auto;
+    }
+  
+    .text {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .title {
+      font-size: 1.5rem; /* Adjust title font size for smaller screens */
+      line-height: 1.2;
+    }
+  }
